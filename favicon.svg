@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="plate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background rounded square -->
+  <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+  <!-- Subtle inner glow ring -->
+  <rect width="100" height="100" rx="22" fill="none" stroke="#ef4444" stroke-width="1.5" opacity="0.3"/>
+  <!-- Dumbbell bar (horizontal center rod) -->
+  <rect x="28" y="46" width="44" height="8" rx="4" fill="url(#bar)" filter="url(#glow)"/>
+  <!-- Left outer plate (big) -->
+  <rect x="10" y="32" width="10" height="36" rx="5" fill="url(#plate)"/>
+  <!-- Left inner plate (medium) -->
+  <rect x="21" y="37" width="7" height="26" rx="4" fill="url(#plate)" opacity="0.85"/>
+  <!-- Right outer plate (big) -->
+  <rect x="80" y="32" width="10" height="36" rx="5" fill="url(#plate)"/>
+  <!-- Right inner plate (medium) -->
+  <rect x="72" y="37" width="7" height="26" rx="4" fill="url(#plate)" opacity="0.85"/>
+  <!-- Center highlight on bar -->
+  <rect x="36" y="46" width="28" height="3" rx="1.5" fill="white" opacity="0.15"/>
+</svg>
